@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 5000;
 exports.onListening = (server) => {
   const { address, port } = server.address();
   console.log(`Mind-Cast-API running at http://${address}:${port}`);

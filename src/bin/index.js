@@ -1,12 +1,13 @@
 const cluster = require('cluster');
 const { cpus } = require('os');
+const PORT = process.env.PORT || 3001;
 
 const serverListeners = require('./server-listeners');
 const environment = require('../config/environment');
 const app = require('../app');
 
 const { onListening, onError } = serverListeners;
-const { PORT } = environment;
+
 
 const server = app.listen(PORT);
 
